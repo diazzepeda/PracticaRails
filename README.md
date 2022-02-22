@@ -52,7 +52,27 @@ psdt: Sirve tambien para cadenas
 - > 10 <=> 10   #=> 0
 - > 10 <=> 5    #=> 1
 
+#unless es exactamente lo contrario de . Es un negado.ifif
+En otras palabras, los siguientes tres ejemplos son equivalentes.
+```
+unless number.even?
+  runs if `number` is NOT even
+else
+  runs if `number` is even
+end
 
+if not number.even?
+  runs if `number` is NOT even
+else
+  runs if `number` is even
+end
+
+if !number.even?
+  runs if `number` is NOT even
+else
+  runs if `number` is even
+end
+```
 
 
 
