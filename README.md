@@ -73,6 +73,66 @@ else
   runs if `number` is even
 end
 ```
+Validar si se ingreso un numero
+```
+def even_odd(number)
+  unless number.is_a? Numeric
+    return "A number was not entered."
+  end
+  if number % 2 == 0
+    "That is an even number."
+  else
+    "That is an odd number."
+  end
+end
+puts even_odd(20) #=>  That is an even number.
+puts even_odd("Ruby") #=>  A number was not entered.
+```
+Métodos de predicado
+A veces encontrará métodos Ruby incorporados que tienen un signo de interrogación () al final de su nombre, como , , o . Todos estos son métodos de predicados, que es una convención de nomenclatura que Ruby utiliza para los métodos que devuelven un booleano, es decir, devuelven o bien .?even?odd?between?truefalse
+```
+puts 5.even?  #=> false
+puts 6.even?  #=> true
+puts 17.odd?  #=> true
+puts 12.between?(10, 15)  #=> true
+```
+Metodos Select y Reject 
+```
+friends = ['Sharon', 'Leo', 'Leila', 'Brian', 'Arun']
+
+friends.select { |friend| friend != 'Brian' }
+ #=> ["Sharon", "Leo", "Leila", "Arun"]
+ ```
+o incluso mejor y más al grano:
+```
+friends = ['Sharon', 'Leo', 'Leila', 'Brian', 'Arun']
+
+friends.reject { |friend| friend == 'Brian' }
+ #=> ["Sharon", "Leo", "Leila", "Arun"]
+```
+Metodo each_with_index
+```
+ruits = ["apple", "banana", "strawberry", "pineapple"]
+
+fruits.each_with_index { |fruit, index| puts fruit if index.even? }
+
+#=> apple
+#=> strawberry
+#=> ["apple", "banana", "strawberry", "pineapple"]
+```
+Metodo map
+```
+friends = ['Sharon', 'Leo', 'Leila', 'Brian', 'Arun']
+
+friends.map { |friend| friend.upcase }
+#=> `['SHARON', 'LEO', 'LEILA', 'BRIAN', 'ARUN']`
+```
+Metodo Select
+```
+responses = { 'Sharon' => 'yes', 'Leo' => 'no', 'Leila' => 'no', 'Arun' => 'yes' }
+responses.select { |person, response| response == 'yes'}
+#=> {"Sharon"=>"yes", "Arun"=>"yes"}
+```
 Metodo include?
 ```
 numbers = [5, 6, 7, 8]
@@ -113,6 +173,8 @@ fruits.none? { |fruit| fruit.length > 10 }
 fruits.none? { |fruit| fruit.length > 6 }
 #=> false
 ```
+
+
 
 
 
