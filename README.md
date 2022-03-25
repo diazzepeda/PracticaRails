@@ -1,3 +1,10 @@
+Buenas practicas en Ruby On Rails
+1. Revisar indentacion
+2. Revisar espacios entre condicionales o variables
+3. Validar con RuboCop
+4. Utilizar map o each en ciclos
+5. Saltar una linea de ultimo en todos los archivos
+
 ##### Algunos métodos numéricos útiles
 - > num.event? = true or false :´Devuelve true si int es un número par´
 - > num.odd? = true or false :´Devuelve true si int es un número impar´
